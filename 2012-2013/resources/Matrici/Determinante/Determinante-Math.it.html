@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it"><!--
+ Archive processed by SingleFile 
+ url: http://www.math.it/formulario/determinante.htm 
+ saved date: Sat Apr 20 2013 18:23:34 GMT+0200 (CEST) 
+--><!-- #BeginTemplate "/Templates/2nd.dwt" --><!-- DW6 --><head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Math.it - Formulario: determinante di una matrice quadrata. Regola di Sarrus</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-language" content="it-IT">
+<link rel="SHORTCUT ICON" href="data:text/plain; charset=x-user-defined;base64,AAABAAEAEBAAAAAAAABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAAAAAAAAAAAAAAAAAAAAAAAAAZPsAYO8AWuEAVNMAT8UATL8AUMcAVdQAWuAAXuoAXuwAXOUAWNsAVNEAUcsAU88AZPoAX+0QY+B/qOZgj9cASrkATcAAUcsAVtYAWd8AWuAAVtYAUcsATsIAS7wATsIAZPkAXuxQjOf///+fu+UASLMASrkATcAAUMgAU88AUs4ATsMASroAR7IARq8ASbcAY/gAXup/q+z///9/pNoARawARq8AR7IASLUASroASrgARa1Acr0QTqoAQaMARq4AY/gAXemvyvP///9gjM4AQqQAQaMAQKEAQKEAQqUAQaJ/nsv////P2usAPpoAQ6gAY/gAXem/1fX///9Ac78APpwAPZgAPJUAO5MAPJcAO5R/m8T///////8AO5MAQqQAY/gAXurP3/j///9Ac78APZkAPJUAOpAAOY8AO5MAOY9/msL///////8AOY8AQaIAZPkAXuz///////8ARa0AP50APZhghb5wksQQSqEAPJZ/m8X///////8AOpAAQqQAZPoAYO////////8ASbYAQ6ifuN3////////f6PUgW7JAbrP///////8APZgARKoAZPsAYfL///////8AT8Vwmtn///////////////+fu+ZAdMP///////8AQqYASbYAZf0AY/f///////8wdt/v9Pz////P3/efv/D///////9Qhtj///////8ASrkAT8UAZv4AZPv////////////////v9f0gcesgcu3///////+vy/T////P3vYAU9AAVtgAZv8AZf3f7P7////////v9f4wf/UAYvUAYvafxPv///////////+/1vgAW+MAXegAZv8AZv6vz//////P4v4QbvsAZPsAZfwAZf1Ai/z///////////+vzfsAYPEAYvQAZv8AZv8QcP9AjP8QcP8AZv8AZv8AZv8AZv8AZv6fxf////////9wqPwAZPsAZPsAZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv9AjP9AjP8AZv8AZv8AZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+<style rel="stylesheet" type="text/css" media="print">/* CSS Document */
+body {   
+	background: white;
+   }
+   
+a:link {color: black; text-decoration: none;}
+a:visited {color: black; text-decoration: none;}
+
+div#testata {
+	display : none;
+}
+div#servizio {
+	display : none;
+}
+div#titolo{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11pt;
+	color: black;
+	margin-left: 0px;
+	border-bottom: 1px dashed Gray; 
+}
+div#contenuti {
+	padding-top: 2em;
+}
+div#separapiede {
+	padding-top: 2em;
+}
+div#contenuti table {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: black;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 0;
+	float: none !important;
+	background: transparent none;
+	padding-top: 1em;
+}
+div#piede table {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+	font-size: 7pt;
+}
+.greco{
+	font-family: "Courier", Times, Arial, Helvetica, sans-serif;
+	font-size: 20pt;
+	font-style: italic;
+	color: black;
+	letter-spacing: 1.5px;
+}
+.barra{
+	display : none;
+}
+.nota {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #999999;
+}
+.evidenziato{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+}
+#scimmia{
+	display: none;
+}
+#valida{
+	display: none;
+}
+#tappe_crono{
+	display: none;
+}
+.img-middle {
+	vertical-align: middle;
+	border: none;
+	margin-bottom: 1px;
+	margin-right: 1px;
+}
+.img-left {
+	vertical-align: middle;
+	float: left;
+	border: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 5px;
+	margin-top: 2px;
+}
+.img-right {
+	vertical-align: middle;
+	float: right;
+	border: none;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 2px;
+}
+.dividisopra {
+	border-top-color: #660066;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.divididestra {
+	border-right-color: #660066;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+.dividisotto {
+	border-bottom-color: #660066;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.dividisinistra {
+	border-left-color: #660066;
+	border-left-style: solid;
+	border-left-width: 1px;
+}
+.cornice {
+	border-color: #eeeeee;
+	border-style: solid;
+	border-width: 1px;
+}</style>
+<style rel="stylesheet" type="text/css" media="screen">/* CSS Document */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #660066;
+	left: 0;
+	top: 0;
+	/*background: #FF6600;*/
+	text-align: center;
+	margin: 0px 5px 0px 5px;
+	background-image: url(data:text/plain;base64,R0lGODlhLAAsAIAAAP++Xv+tJiH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEQ5OUFBRjBBMzYxMUUyOEFFRkY5QUMzRjVDMDJGQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEQ5OUFCMDBBMzYxMUUyOEFFRkY5QUMzRjVDMDJGQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RDk5QUFEMEEzNjExRTI4QUVGRjlBQzNGNUMwMkZDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RDk5QUFFMEEzNjExRTI4QUVGRjlBQzNGNUMwMkZDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAACwALAAAAl+Ej6nLHQ+jnLRSYLPeAfMPeuCYieQpmeiqrmfrjnD8zfRm36X+8mTumwCDkSHxYTwmictg0/fkRXXTW5V2jWVdW9aR00WFe1/N+Fc2p3frylnWdscvc2E9dS/mIW9QAQA7);
+}
+a:link {color: #FFEEA9; /*#FBDE55;*/ text-decoration: none;}
+a:visited {color: #FFEEA9; /*#FBDE55;*/ text-decoration: none;}
+a:hover {color: #FFEEA9; /*#FBDE55;*/ text-decoration: underline; background-color: #660066;}
+a:active {color: #FFFFFF; text-decoration: none;}
+
+div#contenitore {
+	margin: 0 auto; /*centra negli altri browsers*/
+	text-align: left; /*ripristina l'allineamento*/
+	padding-top: 0px;
+	width: 90%;
+}
+div#testata {
+margin:0;
+padding:0;
+	background: transparent; /*#FF6600;*/
+	height:40px;
+}
+div#logo {
+	float: left;
+	width: 110px;
+}
+div#navigazione {
+	float: right;
+	width: auto;
+	margin: 15px 0px 0px 0px;
+	font-size: .7em;
+	font-weight: bold;
+}
+	div#navigazione table {
+		font-size: 11px;
+		font-weight: bold;
+		color: #FFEEA9; /*#FBDE55;*/
+		margin-right: 5px;
+	}
+	div#navigazione a:hover {
+		color: #FFEEA9; /*#FBDE55;*/
+		text-decoration: underline;
+		background-color: transparent;
+	}
+div#intestazione {
+clear:right;
+margin-top:10px;
+}
+div#titolo{
+	color: #FFEEA9; /*#FBDE55;*/
+	font-weight: bold;
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	padding: 3px 0px 3px 3px;
+	margin-left: 5px;
+}
+div#servizio {
+	/*text-align: right;*/
+	margin-right: 10px;
+}
+div#servizio table {
+	font-size: 10px;
+	font-weight: bold;
+	color: #cccccc;
+}
+
+hr {
+	color: #ff6600;
+	width: 100%;
+	height: 2px;
+}
+div#separapiede {
+	height:2px;
+	color:#ff6600;
+	background-color:#660066;
+}
+div#piede {
+	margin: 0;
+}
+div#piede td {
+	font-size: 9px;
+	color: #FFEEA9; /*#FBDE55;*/
+	font-style: italic;
+	letter-spacing: 1.1px;
+	padding: 5px 0px 0px 0px;
+}
+div#piede a:hover {
+	color: #FFEEA9; /*#FBDE55;*/
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+.barra {background-image: url(data:text/plain;base64,R0lGODlhFAAMAPcAAJkBzP9pBaUe0poDzZsGzZkAy7VF2tGL6LdM28Vv4rxY3qYh082B5qww1rhO3JsEzch25M6E5tid63IAmNqj7bA62Kst1aor1dOR6b9e354Mzsl45J0Kzm8AlKko1Mx/5blR3LlP3Nul7cFk4OKNrNGN6L9g386F59OQ6VUAcc+H524AksJm4KMY0bRD2dWX6l4AfZYAyKkn1IEAq8Vt4qUf0uqmt60x1pIAwo4AvVcAdMt+5cNp4cdz492p7rA515wHzcFj4Kgl08dy4682168319ST6f9oBFQAb8Nq4ct85UQAWn0Ap9FIdNyo7ncAnpEXc7I/2dSU6sZw4tWW6qMZ0cl55Kck071b3v1lAfxyIPF+XMtKD9Z7uYMAr+CJqp8Pz4QAsdaW5D8AU7xX3eWElP9nAkoAY/xkAeuYnmIAguGp37pS3N2r7owAu3gAoIIArWEAgaci09mf7LZI2lkAd+GLq9iZ5eSUr9ec620AkZ4Nz50JzowAurZJ27tU3UEAVnwAptaZ66YYxIcAtNZonPWPaf9mAfdoH+hRJ9Nxtdum7cdQqUcAX6ET0N2o6VsAevyCO2AAf/qISnkAopYGtOWXsM+I5+epyp8Qz7tV3fVuMdmg7P5lAaIW0KAS0FgAdlMAbkMAWdOO4uWUr71a3kAAVOqWnf9mApAAwM2C5tKO6KQc0rdL28Rs4osAuW0AklIAbT4AUv9mAJkAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADIALAAAAAAUAAwAQAhNAFcJHEiwYEFYCBMqXLiQlcOHECNGdEWxosWLF2lp3MixY0dZIEOKHDlSlcmTKFOmbMWypcuXLz3KlPmqps2bOHHG2smzp0+fJIMGDQgAOw==); clear: left; height: 12px;}
+.img-middle {
+	vertical-align: middle;
+	border: none;
+	margin-bottom: 1px;
+	margin-right: 1px;
+}
+.img-left {
+	vertical-align: middle;
+	float: left;
+	border: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 5px;
+	margin-top: 2px;
+}
+.img-right {
+	vertical-align: middle;
+	float: right;
+	border: none;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 2px;
+}
+.greco {
+	font-family: Courier, Times, Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-style: italic;
+	letter-spacing: 0.2em;
+}
+#alfabeto .greco{
+	font-size: 1em;
+}
+.promo{
+	font-size: 9px;
+	color: #FFEEA9; /*#FBDE55;*/
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+</style>
+<style rel="stylesheet" type="text/css" media="screen">/* CSS Document */
+body {
+scrollbar-3dlight-color: #FFCC00;
+scrollbar-arrow-color: #800080;
+scrollbar-base-color: #FFBA00;
+scrollbar-darkshadow-color: #800080;
+scrollbar-face-color: #FFBA00;
+scrollbar-highlight-color: #FCD26F;
+scrollbar-shadow-color: #800080;
+scrollbar-track-color: #FF6600;
+}</style>
+<style type="text/css"></style>
+<!-- #BeginEditable "head" -->
+<style rel="stylesheet" type="text/css" media="screen">/* CSS Document */
+div#intestazione {
+	background-color: #660066;
+	border-bottom: 1px solid #9900ff;
+}
+div#contenuti {
+	/*font-size: 10px;*/
+	color: #660066;
+	margin: 0;
+	padding: 0;
+	background-image: url(data:text/plain;base64,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);
+}
+div#contenuti a:link {color: #ff6600; text-decoration: none;}
+div#contenuti a:visited {color: #ff6600; text-decoration: none;}
+div#contenuti a:hover {color: #fbde55; text-decoration: underline; background-color: #660066;}
+div#contenuti a:active {color: #FF6600; text-decoration: none;}
+
+div#contenuti h3{
+	color: #FBDE55;
+	letter-spacing: 0.4em; /*1.5px;*/
+	font-weight: bold;
+	background-color: #90c;
+	padding: 3px 0px 3px 3px;
+}
+div#contenuti h6{
+	margin:0;
+	font-size: 0.76em;
+	color: #660066;
+	letter-spacing: 0.3em; /*1.3px;*/
+	font-weight: bold;
+	background-color: #eee;
+}
+div#contenuti table{
+	margin: 0px 0px 0px 0px;
+	padding: 5px 5px 5px 5px;
+	line-height: 1.2em;
+}
+
+div#contenuti table td {
+	font-size: 0.78em;	/*font-size: 0.85em;*/
+}
+div#contenuti th{
+	font-size: 0.78em;
+	color: #FBDE55;
+	letter-spacing: 0.2em; /*1.3px;*/
+	font-weight: bold;
+	background-color: #9900cc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div#contenuti td table th{
+	font-size: 0.78em;
+	color: #fff;
+	background-color: #606;
+}
+
+div#contenuti ul li {
+	list-style-type: square;
+	padding: 0;
+	margin-left: 1em;
+	line-height: 1.8em;
+}
+div#contenuti li {
+	margin-left: 0.5em;
+}
+.nota {
+	color: #777;
+	line-height: 1.1em; /*12px;*/
+
+}
+.nota td{
+	font-size: 0.75em;
+}
+.more {
+	color: #777;
+	letter-spacing: 0.1em; /*0.7px;*/
+	line-height: 1.2em;
+	background-image: url(data:text/plain;base64,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);
+}
+.more td{
+	font-size: 0.75em;
+}
+.morehr{
+	height: 5px;
+	color: #777;
+}
+.evidenziato{
+	color: #660066;
+	letter-spacing: 0.1em; /*1.3px;*/
+	font-weight: bold;
+	background-color: #eee;
+}
+.tabformule table {
+	font-size: 0.75em;
+}
+.tabformule th{
+	background-color: #606;
+	color: #fff;
+}
+.dividisopra {
+	border-top: 1px solid #660066;
+}
+.divididestra {
+	border-right: 1px solid #660066;
+}
+.dividisotto {
+	border-bottom: 1px solid #660066;
+}
+.dividisinistra {
+	border-left: 1px solid #660066;
+}
+.cornice {
+	border-color: #eeeeee;
+	border-style: solid;
+	border-width: 1px;
+}
+.dividisoprasotto {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #660066;
+	border-bottom-color: #660066;
+}
+</style>
+<style rel="stylesheet" type="text/css" media="screen">/* CSS Document */
+
+div#contenuti ul {
+line-height: 14px;
+}
+/*
+div#contenuti a:link {color: #660066; text-decoration: underline;}
+div#contenuti a:visited {color: #660066; text-decoration: none;}
+div#contenuti a:hover {color: #ffffff; text-decoration: none; background-color: #660066;}
+div#contenuti a:active {color: #FF6600; text-decoration: none;}
+*/
+
+</style>
+
+<!-- #EndEditable --> 
+</head>
+<body style="">
+<div id="contenitore">
+<div id="testata">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td width="110"><!-- #BeginLibraryItem "/Library/math.it.lbi" --><a href="http://www.math.it/index.htm"><img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhbgAoAPcAAP/586BgEdyEG8h4GP+bI7uJVf/oz5ZZEOe4iLuijN3ErbGCVbVtFv/mzu2QH862nefEocOUZo1TD6NiEviuYbRxKMx6Gf29ft2ncq1oFfDj1/Ts5P+1ZN+fXMyBLPf08tC8qsaQWP/s2tvJus2tj+OJHal4RPmWIf+iNeSKHXhHCrJ2Ns99GtaBGvr18oJTH+nf1v+vVf+1SfDp45lbEd6GHKNsMKhkFOWveubJr/zx5r9zF+zayf+/Zvvp2fPLpG9BCL1yGMapj+GaTv+5ZZ1mK//OjvnizOuOH//Ijvbfy//z57uQZOLVx//ZqfDDlvOgQ7JrFf+tOtN/GcilgolRDpphJe6pYKllE7hvF9CwkOmVM//69KB5UP+0WOHAoa5uJ7aTcPKYM9+4k/nImOmlX5NXD39LDPfAivzcwPDcyv/VnObQvPrw5de0kvC2fOfXyIJNDeq/lpBVEP/kwv/ftv/ctbBoFunYyd/Tx62AVOOiXdCXWfeoU/GkUfvWs72ef//Lmf+pRtujamo+CP+qJv+rJ/+qJv+oJf+mJf+kJP+oJv2ZIv+iI/+gI/+dJP+nJf+pJuCHHPeVIv+lJPqXIf+jJf+lJP+nJcZ2F9mDHP+gJf+hJP+fI/KSIfOTIfSUIfCSIOaLHuqOH51eEv6aIsF0F/yZIqtmFcJ1GP+eJOGIHfuYI9J+Gf+dIv+bI+mNHvaUIJxdEKZjEvGRIP+iI8p5F++RIMR1F7txFtiCHNqEG9eCGuXWyMR2F4ZPDMmedOeMHu3cyppcEf/CgLWFVbiBR//HjL2Xcv+wR5l1T7tvF/+xOuvGo59+Xt+SP8OhgcqLSvKsYLh6ON2KL4teMcyUWv/Um9ibW+nLsPy3ccuNS4ZiPs6HPPzEi/i8fdPFuMOumv/fwNOeaPzkzf/MmvKxbuy0fLWYfnJDCeuaQvLRsevTvfbTsv348//EdbCVfLyXcf7Sp+CMMPnOpv/HgP/Jgv/u2/+sR61zN7WMY/+8cv/CdP+rJ/////+sJyH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0I0QjcyMzMwQTM5MTFFMkFCQTk4REFCQjFFRDgwMzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0I0QjcyMzQwQTM5MTFFMkFCQTk4REFCQjFFRDgwMzgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozQjRCNzIzMTBBMzkxMUUyQUJBOThEQUJCMUVEODAzOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozQjRCNzIzMjBBMzkxMUUyQUJBOThEQUJCMUVEODAzOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBv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" border="0" alt="math.it" width="110" height="40"></a><!-- #EndLibraryItem --></td>
+    <td>
+	<div id="navigazione">
+    	<!-- #BeginEditable "navigazione" -->
+    	<table border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><!-- #BeginLibraryItem "/Library/indice_formulario.lbi" --><a href="http://www.math.it/formulario/index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('indiceformula','','../images/back-on.gif',0)"><img src="data:text/plain; charset=x-user-defined;base64,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" alt="Indice del formulario" name="indiceformula" width="11" height="17" border="0" class="img-middle" id="indiceformula"></a>&nbsp;<a href="http://www.math.it/formulario/index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('indiceformula','','../images/back-on.gif',0)">Indice</a><!-- #EndLibraryItem -->&nbsp;<!-- #BeginLibraryItem "/Library/torna_indietro.lbi" --><a href="javascript:history.back()" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('indietro','','../images/back-on.gif',0)"><img src="data:text/plain; charset=x-user-defined;base64,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" alt="torna indietro" name="indietro" width="11" height="17" border="0" class="img-middle" id="indietro"></a>&nbsp;<a href="javascript:history.back()" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('indietro','','../images/back-on.gif',0)">Torna 
+indietro</a><!-- #EndLibraryItem --></td>
+          </tr>
+        </tbody></table>
+    	<!-- #EndEditable -->
+	</div>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+<div id="intestazione">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td colspan="2"><!-- #BeginLibraryItem "/Library/barra3d_viola.lbi" --><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="50%"><div align="left" class="barra"><img src="data:text/plain; charset=x-user-defined;base64,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" alt="sinistra" width="25" height="12"></div></td>
+    <td width="50%"><div align="right" class="barra"><img src="data:text/plain; charset=x-user-defined;base64,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" alt="destra" width="25" height="12"></div></td>
+  </tr>
+</tbody></table><!-- #EndLibraryItem --></td>
+</tr>
+  <tr> 
+    <td><div id="titolo">
+    <!-- #BeginEditable "titolo" -->FORMULARIO: determinante di una
+    matrice quadrata. Regola di Sarrus<!-- #EndEditable -->
+    </div></td>
+	<td>
+	<div id="servizio">
+    <!-- #BeginEditable "servizio" -->&nbsp;<!-- #EndEditable -->
+	</div></td>
+  </tr>
+</tbody></table>
+</div>
+<div id="contenuti">
+<!-- #BeginEditable "contenuti" --> 
+      <table width="100%" border="0" cellspacing="5" cellpadding="5" align="center">
+        <tbody><tr valign="top">
+          <td class="dividisotto">
+            <p><br>
+            <!-- #BeginLibraryItem "/Library/virgolette.lbi" --><b><span>»&nbsp;</span></b><!-- #EndLibraryItem -->Definizione
+                di <span class="evidenziato"><b>matrice</b></span></p>
+            <p>Un insieme di numeri ordinati secondo righe e colonne è detto <span class="evidenziato"><em>matrice</em></span> di
+              ordine <em><b>m</b></em> x <em><b>n</b></em>, ove <em>m</em> è
+              il numero delle righe e <em>n</em> il numero delle colonne.</p>
+            <p>Una <span class="evidenziato"><em>matrice</em></span> si dice <span class="evidenziato"><em>quadrata</em></span> se <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhKQAOAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAAApAA4AQAhZAAMIHEiwoMGDCA8CELgwwMKGCRFCfCjxIcWIESlCxMixo8ePIAs2HBmSIACSJVOqXInxpEOLKl2e3DhQJkqRM2cavEiToU+HFXP2nKjwp8uUE3uyXMqUY0AAOw==" alt="m=n" width="41" height="14" class="img-middle">. </p>
+            <p>Il generico <span class="evidenziato"><i>elemento</i></span> della <i>matrice</i> <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhHQAYAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAAAdABgAQAhdAAMIHEiwoMGDCAUCCLAwoUOHACJGJCjxocWLAxsqxMjRoMaOIC9ODOlxI0mTGU8mXMiSIkOVMGPKFDnz5UeVDW+SlDgSp8udFRnytJmxZceWH41iRIpUaM2nCQMCADs=" alt="matrice Aij" width="29" height="24" class="img-middle"> si indica con <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhGAAZAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAAAYABkAQAhUAAMIHEiwoMGDCBMqJAjAYMOFECNKZEhxYsSGGC1q3HjwIYCHEz1m5FgQ5ECTJFOqXMlS48cAKC+e3AjypcCYMB2+tGnzJM6EMX929HgzZc+WAwMCADs=" alt="aij" width="24" height="25" class="img-middle">. Esso occupa la posizione individuata
+              dall'intersezione tra la <em>i-esima</em> riga e la <em>j-esima</em> colonna
+              della matrice.</p>
+            <p><img src="data:text/plain; charset=x-user-defined;base64,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" alt="matrice" width="321" height="146">,
+            con <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhewAwAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAAB7ADAAQAj+AAMIHEiwoMGDCBMqXMiwocOHCAFAXCiRYcWEFw1KzEgQgEeOE0N2FEnRosmSCkFiJCnQI8uXMGPKjDizoEqNKA9ujPixZsObAYBCFNoy58qUQ0kS9cm0KUyOS4/SdAj1Y0+jIl0GrSg0qtOvYH+GHUt2YlelSKnatKo1LUutS9uWnUu3rt27RW2GvIozb1+/GoF6/QqyMFu5gKfyVHkx6uCVO3cqDko5a8uMmLdOReyXc+W2cLlubDyQtGC8qMF6Ts1a5uPWsLH+pbqatM6RPKXSJYr5MOOTi28nnoxWsvDje0vbzutZ9PHml5VH10zdtO6tr2Nr3869u3eyq7/Gi89+vWN47LxT8t1d82Zm2UVPp+5NvjL80kfjxgw9Hbn95G5h9d59D0kG13WM+TabXgUGWJ5Z+A2HW39mHaicVYBhGCGDna3XmHPVbfihg/sB9yCHxJFomXgs6lRfi3a9CCNq583InYw2steUYOdpeOJlNbbnlHsTnmjcgmV1RZ5jKjJnolIg+odiUk0uOGCVBXL143/o+VjklARymSKEEm6IJG3LHSaih8h9KNeI1dkGJ3FalhimmGd+eSeWOfbp55+AfhUQADs=" alt="indici" width="123" height="48" align="absmiddle"></p>
+            <p>              La <b>teoria dei <em>DETERMINANTI</em></b> è stata
+              sviluppata per poter risolvere i sistemi di equazioni lineari e
+              trovare l'inversa di una matrice quadrata. Per questo fine è stato
+              necessario associare ad ogni matrice quadrata un valore numerico.
+              Tale numero è il <i>determinante
+            della matrice</i>.</p>
+            <p>Ad ogni matrice quadrata <i>A</i> di ordine <i>n</i> può essere
+              associato un numero che si chiama il suo determinante e si indica
+            con <i><em>det A.</em></i></p>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td class="dividisotto"><strong><!-- #BeginLibraryItem "/Library/virgolette.lbi" --><b><span>»&nbsp;</span></b><!-- #EndLibraryItem --></strong><b>Determinante
+              di matrici quadrate del secondo ordine </b>
+            <p>Il <span class="evidenziato"><em>determinante</em></span><em> di
+                una matrice quadrata del <span class="evidenziato">secondo ordine</span></em> (2
+              righe e 2 colonne) <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhZwAyAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAABnADIAQAj+AAMIHEiwoMGDCBMqXMiwocOHDQFAnEjxocSKDi8aBMAxQEePBTVO5Cjxo0iBJwmmDElypUKXGGNWhCkTZc2bMWne1LlRJU6fIXv+HEq0qFGeRiki3ZlQ41KITmdGBAnVYseSH3debdn0IFePJKsmHQs06UqRTzOWHUl27cK0Sru2nUuXLty6L+2+LGmWr9ixLp1iVXnXJsrBA7N6tciWsduaJ2nyvAi3MN63eROzbKnY8mW5Zj8T9cwQJmXSCE9LJZtStV+0ccGCpKyZ6uOjamH/9GszsujfwIMLDz0c82fUl5GrLf6XNfPYgDMr3n0YOu7FtYfqbkxc6FXbhmN1f48KPmh0x9lxtgb9tnLz8pB9mp7qnnt349I3c779vHTm8Mv1955b9QmI3nUGBohggv6dlxpvo0F4YFGBpUcdgANqh51s1SV2l2AespRaW61tZR6GEZn42HpzPeWbhida6Fx7402HEVdYdSaacjMy6OOPzAUEADs=" alt="matrice" width="103" height="50" class="img-middle"> si
+              calcola:<br>
+              <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlh8AAyAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAADwADIAQAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLEAFg3KhQI8ePIEOKHHnQI4CTAVAK9DiQZUaUKlOWJOiSpM2bH1nqbLmy48mYD2vinCh04U6KRyP+XOoyKVKeQ0UWjRp049KVQBteNfkT49aUWbV2vUo1I8OmIYs6Lcu2rdu3cOPKnQtyKl2od/PqzYnXbsW1RvcKHum3sEylPjUqDosUJligfgdLTgy2ZcyuNDGTrTq5Z1CYaGkmHCtU7efFBkMjJC26YGS4ilvzxevwdefbe20fJmlXN+7fwIMLHz7UN2ziyOnWdCw1du3k0I/vVgnZeF+urpdHR87YLOKOruv+pg6/HThzrFx7e/be2TrW3USdN4ffmH7g94/Jz6T9mKn+yU0xBZllBBa4X2UGJnhWgtWBhx+CDwrmXlsTHrjed/9dpB1RGep1VHcWYcdZeSTe5JxjJsnGGYoXpnhhiTCKNxp8Fc6kHWAx5hgibjXq6OOPQAbJ32A9ChljkcUZqeSCtyG55HZOmvjklONBBeJfEd5H5ZYuvuiVikxuSaWLzG34XZmtqSbmk5GZaZWFUa7J4V/utdnhjqKpKWdZhoFXp1ZSzrhnVCJSN2Sa2Ql4Z26ZKUrelfdB+hSEk0qqIpk4tihRnLyxZ5+DNEoFZpiheseiZ13y92eTpsrn5qNzJ2r66WrvkTlqmq5aKRmnhHH0qqeHTurlc4vOxauob9664I1v6jmiTMcmWyth8gHq62w2ORktspniOauggxrpqk4BbmpgWAOGK25+WTl7Fmh3dqsujHYqK+yl8wrZm2aYaahZf8HmW+K22Aps8MEIJyxwQAA7" alt="determinante secondo ordine" width="240" height="50" class="img-middle"><br>
+Il <em>determinante di una matrice quadrata del secondo ordine</em> è uguale
+alla differenza dei prodotti degli elementi delle due diagonali (principale meno
+secondaria).</p>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td width="50%" class="dividisotto"> 
+            <p><b><!-- #BeginLibraryItem "/Library/virgolette.lbi" --><b><span>»&nbsp;</span></b><!-- #EndLibraryItem -->Determinante
+            di matrici quadrate del terzo ordine</b></p>
+            <p>Il calcolo del <span class="evidenziato"><em>determinante</em></span><em> di
+                una matrice quadrata del <span class="evidenziato">terzo ordine</span></em> (3
+              righe e 3 colonne) <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhiwBKAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAACLAEoAQAj+AAMIHEiwoMGDCBMqXMiwocOHECNCBCCxosWLGAVSzKhwo0EAIAOE1FjQ48SQI0V+rAiSYkqTJA/C5EhwJs2bOC3aXLkzYc+cQIMitNlyY9GJMlHCNPlzqNKSK0+6XApVptCYV7NqHdgUY9etYC9+FfvxKdeqUkUytZo2pUq0NcPKnUvXa927D8faHXoWqEe9SLEGFgr4qFrAHVseRpx4pGK2hPFKjti0KOKdf4Nm1txXIuO8eRVP/VwW5WKaR0fzvUp68tzWDDF3xrnZ7+zBWbs+Vs1x9+nejg/DDQvb9c3ilI0rH8458Vu/LllHT856tVqNTD//NZpdJ1fuNd3+xq2O+zlq5hmJQm6+vP3tnMjd23Z4Wb583YIb/jSteXp/86D5NN53lq0V1XXYhefZdwwqSB2CEAq33nwBvrfXgOcdiCGF9ikXn3UdGvfhhCFKNqKGZQF4nH/QqahfbpA55pZ4LyYoYYODyZidbFoVtmFv6F1424mxlSgXkUYmSZySSx7JJF1IovgkWFH+OGWPWAoY4XE2zkdjkeRpSKSB8FkJZmRs8UfVgtcZ1Zd2CboppYtclnfiTHeWxCOaFeaXXlx5zlklnR1lCWONfF7pZJiKNploo1sNOiikQaZYHqWMClgfppGCuVSBZEb15Z9b1jnqQvuZqSVcY6pKloWGiKK4aVWmyemnp9HZait9cb6FJ4m0sXmrkMN6h2OlQIIW6p9rfcjirZKyZGimIHLI6aNlXnsottoGS223dXILbrLijktstmkiCV5zpxb67bLkEvpqsahOGxN/gjEGHpm71oivir/a65yrlKmH2qfAWlsvrPOqFOiGkyIrManbzmnuxRi7FxAAOw==" alt="matrice" width="139" height="74" class="img-middle"> si
+              sviluppa secondo gli elementi di una riga o di una colonna. Nell'esempio
+              sviluppiamo secondo la prima riga.<i><br>
+                <img src="data:text/plain; charset=x-user-defined;base64,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" alt="determinante terzo ordine" width="463" height="74">.</i></p>            
+            <p>Ogni elemento della prima riga viene moltiplicato con il suo <span class="evidenziato"><em>MINORE
+                COMPLEMENTARE</em></span>, ovvero il determinante del secondo ordine
+                ottenuto sopprimendo la prima riga e la prima colonna; i prodotti
+                vengono poi sommati algebricamente tra loro considerando il segno
+                positivo se la somma degli indici dell'elemento considerato è pari,
+                o negativo se è dispari.</p>
+            <p>Sviluppando i tre determinanti del secondo ordine, si ottiene:</p>
+            <p><i><img src="data:text/plain; charset=x-user-defined;base64,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" alt="determinante terzo ordine" width="590" height="74">.</i></p>
+            <p>È utile notare che il determinante di una matrice quadrata
+              non cambia se lo sviluppo viene eseguito rispetto ad una qualsiasi
+            altra riga (non solo la prima) o un'altra colonna.</p>            
+          </td>
+        </tr>
+        <tr valign="top">
+          <td class="dividisotto">
+            <p>Un <b>secondo metodo</b> per il calcolo dei <em>determinanti del
+                terzo ordine</em> è indicato dalla<i> <span class="evidenziato"><b>REGOLA
+                DI SARRUS</b></span></i><strong>.<br>
+                  </strong>Per la sua applicazione è conveniente disporre,
+                  accanto alla matrice data, copia delle prime due colonne ed
+                  eseguire i prodotti indicati, presi in segno positivo seguendo
+            le frecce rosse e negativi seguendo le frecce blu.</p>
+            <p><img src="data:text/plain; charset=x-user-defined;base64,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" alt="determinante Regola di Sarrus" width="375" height="128">&nbsp; </p>
+          <p><img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhTgJKAPcAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEBAAEALAAAAABOAkoAQAj+AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHMkQAMmTFk2iXMmypcuXMGPKnElzokoAOAPkFKhyYE+IOE3u1Hnw58OgOnsaXVqzqdOnUKNKnUoVaNWTRq9q3cq1q9evC7MSFOuTaESyYCuiTWtwLVe3bOPKjYt0KFKeQ/HuDAq3oNCcec3ylFiXqV/CgA2XXeyw8NjHSf8ePuyYseW2bRNDflx58+DISS8LxuxX82fInU+bTS22r0/Tqommji0bdlbXryWLrq378k3bkxvDHv15NtPOrafinptwOfPn0KNLn+7ROXXr1LNr3849+t/exK3+sy6KGPxtz93Tq1/Pvr379/Djy59/lj52+vjz62+vdPfF/h8B2NB9+xVo4IFzrVUXaBktyNdGhQVGIIIUVmhhVBM+l+GFHHaYn4AAKvhgfYJtSBpxEPqHkHMCKtRiWCo2x9eIJTYW44nLzUjji83dyJh4Ov7EI3m0uejjWEEGh9uQKx6p14ybLekkk1qhNSKNKd0FZYNa3lVkeZFZ2aWXmSlFZpbfBVbaXmci2V+bZ7Gpppu/zanXYFhS5GWedD4pZp0mahmmjHKKCOh/dsGZ200MlumncvZ5KOmklM7E6JcpOUmYpihW6umnoDZIKJ52xskon3ru1Winobbq6qv+sMYq66wUmiiXrbTmqut6SwkVoK8gAWbjrsQWe+CloSWLl02vLYukns0qeyauxlZrbVpuKSZqcBqdx+m14IZLV6Tilmuud+Seq+66amUoXrrsxivvisDeuepk7zZLrb4hCTtsnKxmFnBR9W5K78ClISwwdmIqzK9wDiMWsb9HFdytxWFh7KLG7Ua87JIc9+jstCLHFuRx0Sqr8r+JJmywtELmFbOOUZoZrc3O3nyzzKWiiLPKquYMdNChTWsljr+5eVrLOo8sIYs7x1yi1M9OLbSiJcvp8s88I8tm1SzXqbTVQhe9s8tSZcstRt6miGO36BEZt9zflozp3GrP/bL+3r4NuPZ/fIuW999qEU64goYzmzhtiC9uKbzzRi55TPuCVfnkmGdu5HyXa+7551JfTnF1IZ/4+emoZ4ozmT036XSviifLusyp1267VTDWnbvuu/94++/A0w1f58EXb/zxyCf/FPFvKe985sxvFf3z1FM6/VXXV6/9hdlT1f324BsoZNnbtl74ynaHr76xyHr8r/tHBe74+vS/eqm/2sZv9mjt64+/6d+rnwD50zv4FfBue5PQABcoq8EhkERloVbbDMjACh7Lb/0iydEsyEFPBRBDHQzhpD4IFRKK8IRfMaFTVIjCFmIPci6M4fKytLfhyfCGM0wfZvIlHxZqkDn+PsShS5Imuxj172RKIh/blFg+KS2KT0TMnfkWM0XXkaaKUcRgFQ2Xxc1hkYmZQh+RtriafXXRi04koxTT6Joz9u5+VBpffeTotgfGzn05kh//3jehCfaFjiXRoxUt80dBAnJbDzzk5uyoP0YqcpC2eiTdClm3pNXrfqYzILCE1b58cXJpjESNr/pXI/9dEjUfWw0Vy7jHxHmLYiFiJSYpk0qT6dCSRdrkKFUDx1aq0pS+lE0tvYanYQpvjb48VSpJqctfcgqXgpOlM4u5PzkGcZCQ7MgEEQk0uB1pm2gDYw0dRrWDzQ+DKVskwuYUqPxhc2Cw49IxAehACgoMbOrPhOc8a4I4STJrfLjCGJUguM49wgWc0IogjBCKnkDtk5p2BGgdCypRHdpzkvpkqC29GTiLNU6haXtfdX740DuK9KQTxZ1KtWnSQIqEh40caUtdKlOCorMq15RJToXIU5bsFCY/7alQXwrDoRpVOkEd4lGXep2iMvWp2HIqVKfavOJUzo1NjClVt9o8fyY0lCvNI1fHKj1pEtJgo4slidL6NrK61XsbOyfEMklDfCb1rXg9qCDDetF3DhSvgFUqTQNE0pIG9rCITaxiF8tYkgQEADs=" alt="determinante Regola di Sarrus" width="590" height="74"></p>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td><b><!-- #BeginLibraryItem "/Library/virgolette.lbi" --><b><span>»&nbsp;</span></b><!-- #EndLibraryItem -->Principali
+              <span class="evidenziato">proprietà</span></b>
+            <p>i) il valore di un determinante non cambia se si scambiano le
+              righe con le colonne:</p>
+                <blockquote>
+                  <p> <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlh2QBKAPAAAP///wAAACwAAAAA2QBKAAAC/4SPqcvtD6OctNqLs968+w+G4kiW5skF6KqplMvGrwLL9lNH+c0n+94LAh3D4O1nTBqKDKZyhXwKK06pKWo9UrM8LDdW9X1tXkBAFbaczaV1On3IuUdzUh3ida1DevjW/Pa3tOQn0WdHaEgTx8jXKAIDVxj5+EFJV4mzyJaZglCo2NkwOSja8olpuhAVeRgHygmY+Akbu7cHKPfXOts704sre8GbS4sqxlmnq5aodwx76IxcOiGtPP07J029i3bMzep2qUokLgptzh2rjkeINs6uk15Ze/b+Db45iu2p31ETbJ0OTfg8AOSzjJ2ThP/8NcRGigi/fuQyHOy0cOIpVP+1mviLuK/gBm8VMVxUWM6bPYPaVrJ8FxDkqpYdfbi0V9OmM5cCe666gqKIzJBAizr0OaaNoKRBjzJF9OvpiTJSU1WrOtUpVktLtzrS6PXh1bCQtJLdOPYsV7BqTXZti7Yk3FBp58aNZ/ctwbwWzfIdGPUvM7aC99ItHBgvYomJF7eDSBIh0n+RH9e9AwKzZEn6XGX29VkYYHc4E3peGxA1Z2TwDMod9lqxR1tlZaP1g+Sk69iBcW/RLXZyXN9iiIk+ThdXTGivmr/SXZrnIGLLB4tOndryreoYk6nM143Ntm1jtaG0vSga+Ijm15EHjPlSa/HzwL+o3xPUypgQf8//AzIJfgBSUd+A5zGG3ls5fQScZT/5ZZ1IJhmYn2HCRZhgY7Rp2N1ahMGGD1UcSejWQQsygsVQ/FR2ii4n0rMhibmolJ0a+834Eo0NWkjLdjUSqIx0FgWpHIQZupXVbHU9aBRUSvLmmIqOIQjlYlJO+eSRU16J5VEvwsVllyJ92VaYYh54ZpYOpuklm0Qd5uaYcTIJ55wV2imjmnOKGKeZZ/Lppp9iAsqmoF3mwSJLF7aQ6JujyUJmc5Eas9o3p+3240igUTnapQ9luhGocsbo4aTUEFdeldo5iSqKeYKo5WUc7rPjcFYtKid1wYjaWR9yMDeLdML+5tyuvE6j3K/6jxVrbIMkxffqg9CWsiyko+I6orU+sffdtuE5291+wOlXIJ2GlNvfDOJ2eN8911aDboh+8aeokfDaFC1hv37lHGX4svtmpAztZqle53j4oYIAPylwtgifanA8LzZKZopm3VRMCrfgSNlOu0Z8o5BDbizyhB6Duya/SunJqbm3vvwunoZiaSqeNt+Mc846b1UAACH/C01hdGhUeXBlMDAx/wUBAAUBRFNNVDUAABNXaW5BbGxCYXNpY0NvZGVQYWdlcwARBVRpbWVzIE5ldyBSb21hbgARA1N5bWJvbAARBUNvdXJpZXIgTmV3ABEETVQgRXh0cmEAEgAIIS9Fj0QvQVD0EA9HX0FQ8h8eQVD0FQ9BAPRF9CX0j0JfQQD0EA9DX0EA9I9F9CpfSPSPQQD0EA9A9I9Bf0j0EA9BKl9EX0X0X0X0X0EPDAEAAQIBAgICAgACAAEBAQADAAEABAAACgEAAwAEAwABAAUAAQEBAwMAAAEAAgCDYQADABsAAAsBAAIAiDEAAgCCLAACAIgxAAABAQAACgEAAgCDYQADAP8bAAALAQACAIgxAAIAgiwAAgCIMgAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgxAAIAgiwAAgCIMwAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgyAAIAgiwAAgCIMQAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgyAAIAgiwAAgCIMgAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgyAAIAgiwAAgCIMwAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgzAAIAgiwAAgCIMQAAAQEAAAoBAAIAg2EAAwAbAAALAQACAIgzAAIAgiwAAgCIMgAAAQEAAAoBAAIAg2EAAwAbAAD/CwEAAgCIMwACAIIsAAIAiDMAAAEBAAAAAAoCAJYH7AIAlgjsAAIEhj0APQIAmAHvAgCYBO8DAAQDAAEABQABAQEDAwAAAQACAINhAAMAGwAACwEAAgCIMQACAIIsAAIAiDEAAAEBAAAKAQACAINhAAMAGwAACwEAAgCIMgACAIIsAAIAiDEAAAEBAAAKAQACAINhAAMAGwAACwEAAgCIMwACAIIsAAIAiDEAAAEBAAAKAQACAINhAAMAGwAACwEAAgCIMQACAIIsAAIAiDIAAAEBAAAKAQACAINhAAMAGwAACwEAAgCIMgACAIIsAAIAiDIAAAEBAAAKAQACAINhmQADABsAAAsBAAIAiDMAAgCCLAACAIgyAAABAQAACgEAAgCDYQADABsAAAsBAAIAiDEAAgCCLAACAIgzAAABAQAACgEAAgCDYQADABsAAAsBAAIAiDIAAgCCLAACAIgzAAABAQAACgEAAgCDYQADABsAAAsBAAIAiDMAAgCCLAACAIgzAAABAQAAAAAKAgCWB+wCAJYI7AAAAAAh/wtNYXRoVHlwZTAwMgYhAAAAAAAAOw==" alt="determinanti proprietà" width="217" height="74"> </p>
+                </blockquote>
+                <p>ii) lo scambio di due righe o di due colonne di un determinante
+                  equivale a cambiarne il segno, ovvero a moltiplicarlo per -1
+                  :</p>
+                <blockquote>
+                  <p> <img src="data:text/plain; charset=x-user-defined;base64,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" alt="determinanti proprietà" width="238" height="74"> </p>
+                </blockquote>
+                <p>iii) moltiplicare tutti gli elementi di una riga o di una
+                  colonna per uno stesso numero <i>k</i> equivale a moltiplicare il
+                  determinante per <i>k</i> :</p>
+                <blockquote>
+                  <p> <img src="data:text/plain; charset=x-user-defined;base64,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" alt="determinanti proprietà" width="288" height="74"> </p>
+                </blockquote>
+              <p>iv) se tutti gli elementi di una riga o di una colonna sono
+                nulli, il valore del determinante è nullo:</p>
+              <blockquote>
+                <p> <img src="data:text/plain; charset=x-user-defined;base64,R0lGODlhdQBKAPAAAP///wAAACwAAAAAdQBKAAAC/4SPqcvtD6OctNqLs968+xN8oheOSGmmFpqy6gu5o/wGdA3fZqnvOQw6AYO4IasnQm5cNoCScsQ0n84fsfmJrgzYmLXKnQkrKCpYxRtn1RJtxHxJc3lHODEMBdH1TOtefkeGl+cUAhhoJ1hoWJaQqBc31ch21vLQN9R2gol26Zip+Rno48AJWqrgZtlgg9V6Wvr6SinmCUvI8Diheyv11Wv0CyxcOwzE+2YcXKTMvNrc6Qxd/GyEvLV0c707uJxxOBrdTYxbOS5uLq14Xpe+RPtmyP1NO9lFAm97bzvXOptbb9C2VPlYhUNFL5y8g+8YAnS4AJmqMGUqbopTMCKkOdybVPnzh5AdmCkjMyK086ekKHeEaDBitJJlvBWSYlbatg9it4FrNp5Lwu/nMJc6GwKcaGyhGp4PI8paBA3kS5NGQ06zSVUD06tZE3IFqu5rVVJi8YUt6+ssWmzo1nqt5jZt2xxbvaitVdcq2V95m8JF11ejM5JghV5SalfcnsIyDRaaF20SY5RFu/pCygGzY8OCO1mE6rMcnM///nHOPBKxZruUH09c3WHqPVNkEsl6jZVxKtpJ21nGGDSw3J3kYgoHjqg46KnNZoH8zVbvVx3HjzePiz279u3cLxQAACH/C01hdGhUeXBlMDAx/wUBAAUBRFNNVDUAABNXaW5BbGxCYXNpY0NvZGVQYWdlcwARBVRpbWVzIE5ldyBSb21hbgARA1N5bWJvbAARBUNvdXJpZXIgTmV3ABEETVQgRXh0cmEAEgAIIS9Fj0QvQVD0EA9HX0FQ8h8eQVD0FQ9BAPRF9CX0j0JfQQD0EA9DX0EA9I9F9CpfSPSPQQD0EA9A9I9Bf0j0EA9BKl9EX0X0X0X0X0EPDAEAAQIBAgICAgACAAEBAQADAAEABAAACgEAAwAEAwABAAUAAQEBAwMAAAEAAgCDYQADABsAAAsBAAIAiDEAAgCCLAACAIgxAAABAQAACgEAAgCIMAAAAewAAgCDYQADABsAAAsBAAIAiDEAAgCCLAACAIgzAAABAQAACgEAAgCDYQADABsAAAsBAAIAiDIAAgCCLAACAIgxAAABAQAACgEAAgCIMAAAAQACAINhAAMAGwAACwEAAgCIMgACAIIsAAIAiDMAAAEBAAAKAQACAINhAAMAGwAACwEAAgCIMwACAIIsAAIAiDEAAAEBAAAKAQACAIgwAAABAAIAg2EAAwAbAAALAQACAIgzAAIAgiwAAgCIMwAAAQEAAAAACgIAlgfsAgCWCOwAAgSGPQA9AgCYAe8CAJgE7wIAmATvAgCIMAAAAAAh/wtNYXRoVHlwZTAwMgYhAAAAAAAAOw==" alt="determinanti proprietà" width="117" height="74"> </p>
+          </blockquote></td>
+        </tr>
+    </tbody></table>
+    <!-- #EndEditable -->
+</div>
+<div id="separapiede"><hr></div>
+<div id="piede">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><a href="http://validator.w3.org/check?uri=referer" target="_blank"><img src="data:text/plain; charset=x-user-defined;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAANCAYAAADVNlKHAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAdTAAAOpgAAA6lwAAF2+XqZnUAAAD+ElEQVR4nGL8DwQMo4AqACCAWGhtwY/TrrS2YsABh+luMA0QQODA/PfvP8PWk3cZ3n/+wRDnpsPw9M1Xhu3HrzNY6ysyaMoJg+XXHbvNsO/sQwZeDlawRmZ2ZobKcAuGH18+MCxevJhBXV2dQVdXl4GTk5NBVFR04Hw2gAAggJhgjJdvPjBMWnmS4c/ff2D+/kvPGTYduQVm33vxkWHG6jMMl248AwfivPWnGU6df8zAwMTCMG9xH8ORI0cYVq9exdDa2srw9t27gfHJQIL798EUQACBA5OJiRGcCr98+cGw7+ITBhF+DrDk5sOQwLz+8A3DkxfvGcrjrBmMVMQZ1BXFGMribRju3rjEcP3SM4a8vDyGlIxscOqUlpLCay8sS2Dj42PDMKnm4HMHPnWE5GGA6cpHBgYVFQYGYNUDEEDwlKkkKcBgrCfHsGrPVYYP334x3Lz3iuHNuy8M1x+9Zbh2/zVYTk6cn6FmMtASNlYGJ0NZhkf37jK4uLgwODg4MNhYmDGkpqYy8PLy4rUcVIbCHAmiiSlTYWrQ1SKbQyrAZy/MXchuxQYY3/1iYMs4y8CgrgbkMDIABBA8MJmBqdPdVJHhyNl7DMsO3AQGGAuDvoYkQ++KUwyX7r9hsNKSYpAQ5mHwd9IGp9KOJacY5JSUGezs7OFFA6GARPYIroAkNkUQModmANb2AdYjbPGnGBj+AgV27AQLAQQQPDBZmJkYrHRkwOyZy44y2JkrMXjYaDCs33qe4eGTdwym2tIM4vycDDXArJ7ob8SwZMsZBkZeKQZZWVmwXlIALACwBRosRRAL6BqQf/4zsLsdZGCZcIuB8f1vBsa3Pxn+GQoyMMjJgaUBAgglFMQFucGp8TWwwgmwUmUwUhZlYOJkZeDnhpShoFqeF8jXUhRlePvxG8Ppqw+BqZsRrv/evXtgjA8gpyRC2YgSQEyZiI1GdhdGqmdmZPgbp8DAsuIxA1s2MHsDM+TvNl24NEAAMSI32kHZddneawyLtl5i2DEhkuHtpx8M1TMPMGgrijAIA1PlrPVnGTysNBg2HLgCDHgehsoQRYYHd24yCAoKMbx//45h3br1DM3NzQza2tooDhtWABhaLEsfMrBMvg3m/jjmzMBhsQfMBggglEY7LKu//fidgQWY4sT4OBj8bVXBcm4migzP33wG1vA3GJRlBBmq4m0ZtOWFGf78+MawfPlyhtevXzMkxMYwqKmp0dl3dAbAjPgnSo7hPy8LA8vse2A+DAAEECN6dxJUlfwDplBYOQiSBqkANZ8+f//NcO/5B3BFBApoUBYHyd+HtrMUFBTB6pDBsEuZyOAfKGAY4UUEQABhBOYoIB8ABBgAwsyAUgX6n0cAAAAASUVORK5CYII=" alt="Valid XHTML 1.0 Transitional" name="valida" width="83" height="13" border="0" id="valida"></a>
+
+</td>
+    <td align="right" valign="top">
+	Copyright © 2000-2013 math.it
+    </td>
+  </tr>
+</tbody></table>
+</div>
+</div>
+<!-- #BeginLibraryItem "/Library/contatore.lbi" -->
+
+<!-- Google Analytics Code START -->
+
+
+<!-- Google Code END --><!-- #EndLibraryItem -->
+<!-- #EndTemplate --><iframe id="rdbIndicator" width="100%" height="270" border="0" src="about:blank" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe></body></html>

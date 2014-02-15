@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage[active,tightpage]{preview}
+\setlength\PreviewBorder{2pt}
+\usepackage[paperwidth=21cm]{geometry}
+
+\usepackage{rotating}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\usepackage{mathtools}
+\usepackage{breqn}
+\usepackage{setspace}
+
+\begin{document}
+        \begin{preview}
+                \[
+                    min - 2 x_1 - 5 x_2 - x_3 - x_3
+                \]
+                \paragraph{}
+                \begin{math}
+                        \begin{dcases}
+                                \begin{tabular}{r r r r r r l}
+                                        $ x_1 $   &  $ + 3 x_2 $ & & $ + x_4 $ & & & $ = 4 $ \\
+                                        & $ 5 x_2 $ &  $ + x_3 $ & & $ + x_5 $ & & $ = 5 $ \\
+                                        $ 2 x_1 $ &  $ + 4 x_2 $ & $ + x_3 $ & & & $ + x_6 $ & $ = 6 $
+                                \end{tabular}; \\
+                                \quad x_1, x_2, x_3, x_4, x_5, x_6 \geq{0}
+                        \end{dcases}
+                \end{math}
+                \begin{center}
+                        \begin{tabular}{|r r r r r r | r | r}
+                                \cline{1-7}
+                                -2 & -5 & -1 & 0 & 0 & 0 & 0 & \\
+                                \cline{1-7}
+                                1 & 3 & 0 & 1 & 0 & 0 & 4 & \textcolor{blue}{ $ x_4 $ } \\
+                                0 & 5 & 1 & 0 & 1 & 0 & 5 & \textcolor{blue}{$ x_5 $ } \\
+                                2 & 4 & 1 & 0 & 0 & 1 & 6 & \textcolor{blue}{$ x_6 $ } \\
+                                \cline{1-7} \multicolumn{7}{r}{{\footnotesize Tableau in Forma Canonica}}
+                        \end{tabular}
+                \end{center}
+
+                \paragraph{}
+                \begin{minipage}[c]{0.4 \linewidth}
+                        \begin{tabular}{r | r r r r r r | r | r}
+                                \multicolumn{1}{r}{} & & h & & & & \multicolumn{2}{r}{} &  \\
+                                \cline{2-8}
+                                \textcolor{gray}{0} & -2 & \textcolor{blue}{-5} & -1 & 0 & 0 & 0 & 0 & \\
+                                \cline{2-8}
+                                \textcolor{gray}{1} & 1 & 3 & 0 & 1 & 0 & 0 & 4 & \textcolor{blue}{ $ x_4 $ } \\
+                                r & 0 & \textcolor{red}{ 5 } & 1 & 0 & 1 & 0 & 5 & \textcolor{blue}{$ x_5 $ } \\
+                                \textcolor{gray}{3} & 2 & 4 & 1 & 0 & 0 & 1 & 6 & \textcolor{blue}{$ x_6 $ } \\
+                                \cline{2-8}
+                        \end{tabular}
+                \end{minipage}
+                \begin{minipage}[c]{0.5 \linewidth}
+                        { \scriptsize Dividere la riga r per \textcolor{red}{ r,h }, ricavando la riga di pivot.\\
+                                Sottrarre alla riga $i \in \{0, ..., m\} - \{r\} $ la riga di pivot moltiplicata per i,h.
+                        }
+                \end{minipage}
+
+                \paragraph{}
+                \begin{tabular}{r | r r r r r r | r | r}
+                        \cline{2-8}
+                        & \textcolor{blue}{-2} & 0 & 0 & 0 & 1 & 0 & 5 & \\
+                        \cline{2-8}
+                        & 1 & 0 & -3/5 & 1 & -3/5 & 0 & 1 & \textcolor{blue}{ $ x_4 $ } \\
+                        & 0 & 1 & 1/5 & 0 & 1/5 & 0 & 1 & \textcolor{blue}{$ x_2 $ } \\
+                        & \textcolor{red}{2} & 0 & 1/5 & 0 & 4/5 & 1 & 2 & \textcolor{blue}{$ x_6 $ } \\
+                        \cline{2-8}
+                \end{tabular}
+                $\implies$
+                \begin{tabular}{r | r r r r r r | r | r}
+                        \cline{2-8}
+                        & 0 & 0 & 1/5 & 0 & 9/5 & 1 & 7 & \\
+                        \cline{2-8}
+                        & 0 & 0 & -7/10 & 1 & -1/5 & -1/2 & 0 & \textcolor{blue}{ $ x_4 $ } \\
+                        & 0 & 1 & 1/5 & 0 & 1/5 & 0 & 1 & \textcolor{blue}{$ x_2 $ } \\
+                        & 1 & 0 & 1/10 & 0 & 2/5 & 1/2 & 1 & \textcolor{blue}{$ x_1 $ } \\
+                        \cline{2-8}
+                \end{tabular}
+
+                \paragraph{}
+                Soluzione ottima $ x^T = \begin{bmatrix} 1 & 1 & 0 & 0 & 0 \end{bmatrix} $ di valore -7.
+        \end{preview}
+\end{document}

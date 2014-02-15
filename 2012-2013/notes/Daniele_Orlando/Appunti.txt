@@ -1,0 +1,195 @@
+Libro di Testo: Fischetti.
+
+* Terminologia
+        Regione ammissibile.
+        Soluzione ammissibile.
+        Soluzione ottima: c^{T}x* ≤ c^{T}x ∀x ammissibile.
+
+
+* Vettori e Combinazioni
+        Un vettore appartenente ad R^n è nella forma (c_1, ..., c_n).
+
+        Un vettore y ∈ R^n si dice combinazione lineare dei vettori x_1, ... , x_k
+        se esistono k moltiplicatori reali w_1, ..., w_k tali che
+        y = ∑[i=1, k](w_i * x_i)
+
+        Se w_i ≥ 0 con i = 1,..., k, la combinazione è detta conica.
+        Se ∑[i=1, k](w_i) = 1 la combinazione è detta affine.
+        Una combinazione che è conica ed affine si dice convessa.
+
+        Semplificando:
+        Un vettore è combinazione lineare di altri vettori se il primo vettore è il risultato della somma degli altri vettori, ognuno di questi moltiplicato per una costante qualsiasi.
+        Se tutte le costanti sono maggiori o uguali a zero allora la combinazione lineare è anche conica.
+        Se la somma delle costanti è uguale a uno allora la combinazione lineare è anche affine.
+
+
+        * Vettori Linearmente Indipendenti
+                Un insieme di vettori è indipendente se è possibile ottenere il vettore nullo solamente con tutti i lambda uguali a zero.
+                Esempio: { (1 0), (0 1) };
+
+
+        * Vettori Linearmente Dipendenti
+                Un insieme di vettori è dipendente se è possibile ottenere il vettore nullo con almeno un lambda diverso da zero.
+                Un insieme che contiene il vettore nullo è linearmente dipendente.
+                Esempio: { (1 1), (2 2) };
+
+
+        * Vettore Direzione
+                Un vettore d ∈ R^n si dice direzione di un poliedro P se ∀ x ∈ P e w ≥ 0
+                la semiretta x + wd è contenuta in P.
+
+                Un vettore d ∈ R^n è una direzione di un poliedro P = {x ∈ R^n | Ax ≥ b} se e solo se è soluzione del sistema omogeneo Ax ≥ 0.
+
+                Un poliedro contiene una retta se contiene un vettore direzione con w qualsiasi (anche negativo).
+
+
+        * Rappresentazione di un vettore rispetto ad una base
+                Data una base B = {x_1, ..., x_r} di un sottospazio S ed un generico vettore y ∈ S, si definisce rappresentazione di y rispetto a B il vettore (w_1, ..., w_r) tale che y = ∑[i=1, r] w_i * x_i
+
+
+* Funzioni e Convessità
+        * Funzione Lineare
+                Una funzione si dice lineare se, comunque presi x,y ∈ R^n e k ∈ R,
+                f(x + y) = f(x) + f(y)
+                f(k x) = k f(x)
+
+
+        * Insieme Convesso
+                Un insieme S contenuto in R^n si dice convesso se, ∀x,y ∈ S e ∀w ∈ [0,1] si ha
+                z = wx + (1 - w)y ∈ S
+
+
+        * Funzione Convessa
+                Una funzione definita su un insieme convesso S si dice convessa se ∀x,y ∈ S e ∀w ∈ [0,1] si ha
+                f(z) ≤ w f(x) + (1 - w) f(y) con z = wx + (1 - w)y ∈ S
+
+
+        * Problema di Programmazione Convessa
+                Un problema min f(x) | x ∈ X ⊆ R^n si dice di programmazione convessa se X è convesso e f(x) è convessa su X.
+
+
+        * Minimo locale
+                x* si dice punto di minimo locale di f su X se esiste w > 0 | f(x*) ≤ f(x) ∀x ∈ X per cui |x - x*| ≤ w.
+
+
+        * Punto Estremo
+                Come per l'insieme convesso, ma se non esiste z.
+
+
+* Diametro di un poliedro
+        Dati due vertici x, y la distanza fra x e y ( d(x, y) ) è il minimo numero di ”salti” fra vertici adiacenti necessari per passare da x a y.
+        Definiamo diametro D(P) di un poliedro P la massima distanza d(x, y) fra tutte le coppie (x, y) di vertici di P.
+
+
+        * Congettura di Hirsch
+                Delta(x, y) ≤ m - n
+
+
+* Problema di Ottimizzazione
+        L'insieme ambiente E appartiene ad R^n.
+        L'insieme delle soluzioni ammissibili (regione ammissibile) è contenuta uguale nell'insieme ambiente.
+        La funzione obiettivo va dalla regione ammissibile ad R^n.
+
+        Problema di ottimizzazione (in forma di min):
+        Trovare un elemento x* ∈ X tale che f(x*) ≤ f(x), ∀x ∈ X.
+
+        x* è detta soluzione ottima.
+        f(x*) è detto valore ottimo.
+
+
+* Soluzioni e Basi
+        * Soluzione ammissibile
+                Vettore x* che soddisfa tutti i vincoli.
+
+
+        * Base
+                Una collezione di m colonne di A linearmente indipendenti è detta base di A.
+                Queste formano una sottomatrice quadrata B non singolare.
+
+
+        * Soluzione di base
+                Vettore x* che soddisfa tutti i vincoli di uguaglianza (i vincoli sono attivi).
+                Fra tutti i vincoli attivi in x* ce ne sono n linearmente indipendenti.
+
+
+        * Soluzione di base ammissibile
+                É una soluzione di base che soddisfa tutti i vincoli.
+
+
+        * Basi Adiacenti
+                Per problemi in forma standard, due basi sono adiacenti se differiscono di una sola colonna.
+                Più genericamente, due soluzioni di base si dicono adiacenti se esistono n - 1 vincoli linearmente indipendenti che sono attivi in entrambe.
+
+
+        * Soluzione di base associata alla base
+                Ponendo x_f = 0, x_b = B^{-1}b è una soluzione di base associata alla base B.
+                Se x_b è ≥ 0, x_b è una soluzione di base ammissibile e B è una base ammissibile.
+
+
+        * Basi Degeneri
+                Una base è degenere se b¯_i = 0.
+
+
+        * Rango
+                Si definisce Rango(A) la dimensione del sottospazio generato dai vettori colonna di A.
+                Se Rango(A) = min{m, n} la matrice ha rango pieno.
+                Per ipotesi, m ≤ n e Rango(A) = m, ovvero ha rango pieno.
+
+
+* Metodo Del Simplesso
+        - Scegliamo una base iniziale, che può essere anche la matrice identità delle variabili di slack e surplus.
+        - Controlliamo se per le variabili fuori base c'è un vettore dei costi ridotti negativo. Nel qual caso la base non è ottima e la variabile x associata al vettore dei costi ridotti è la variabile designata ad entrare in base in quanto migliorativa della soluzione.
+        - Se la base non è ottima scegliamo la variabile designata ad uscire dalla base calcolando il rapporto tra b¯_m e a¯_m,h. Se a¯_m,h ed il rapporto sono maggiori di zero, la variabile uscente è quella col rapporto più piccolo. Altrimenti, se una b¯_m è uguale a zero il caso è degenere e si rimane sulla stessa base perché non si avrebbe miglioramento, oppure se una a¯_m,h è minore di zero x_h può as∑ere un valore grande a piacere ed il problema è illimitato.
+
+
+        * Complessità
+                Implementazione standard: O(m^3 + n*m).
+                Implementazione matriciale: O(n*m).
+
+
+* Regole Anticiclaggio
+        * Regola di Bland
+                Scegliere la variabile entrante (negativa) x_h con il minimo indice h.
+                Scegliere la variabile uscente x_B(i) con il minimo indice B(i).
+
+                Utilizzando la regola di Bland l'algoritmo del simplesso converge dopo al più (n : m) iterazioni.
+
+
+* Problema Duale
+        * Dualità Debole
+                p^{T}b ≤ c^{T}x
+
+
+        * Dualità Forte
+                min{ c^{T}x | Ax ≥ b, x ≥ 0 } = max{ p^{T}b | p^{T}A ≤ c^T, p ≥ 0}
+
+
+        * Condizioni di Ottimalità
+                Due vettori x ∈ R^n e p ∈ R^m sono soluzioni ottime per i rispettivi problemi primule e duale se e solo se:
+                1) Ax ≥ b, x ≥ 0
+                2) p^{T}A ≤ c^{T}, p ≥ 0
+                3) c^{T}x = p^{T}b
+                 ↓
+                p^{T}b ≤ p^{T}Ax ≤ c^{T}x
+                 ↓
+                p^{T}Ax = c^{T}x
+                p^{T}Ax = p^{T}b
+                 ↓
+                (c^{T} - p^{T}A)x = 0
+                p^{T}(Ax - b) = 0
+                 ↓
+                1) Ax ≥ b, x ≥ 0
+                2) p^{T}A ≤ c^{T}, p ≥ 0
+                3a) (c^T - p^{T}A)x = 0
+                3b) p^{T}(Ax - b) = 0
+                 ↓
+                Poiché il Simplesso considera il problema in forma standard con Ax = b, le condizioni di ottimalità diventano:
+                1) Ax = b, x ≥ 0
+                2) p^{T}A ≤ c^{T}
+                3) (c^T - p^{T}A)x = 0
+
+                c^T - p^{T}A è il vettore dei costi ridotti.
+
+
+* Note
+        In ottimizzazione combinatoria è sempre possibile ricorrere all'algoritmo di enumerazione totale. In ricerca operativa no.
