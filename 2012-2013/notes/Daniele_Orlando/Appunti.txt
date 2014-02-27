@@ -68,7 +68,7 @@ Libro di Testo: Fischetti.
                 Un problema min f(x) | x ∈ X ⊆ R^n si dice di programmazione convessa se X è convesso e f(x) è convessa su X.
 
 
-        * Minimo locale
+        * Minimo Locale
                 x* si dice punto di minimo locale di f su X se esiste w > 0 | f(x*) ≤ f(x) ∀x ∈ X per cui |x - x*| ≤ w.
 
 
@@ -98,7 +98,7 @@ Libro di Testo: Fischetti.
 
 
 * Soluzioni e Basi
-        * Soluzione ammissibile
+        * Soluzione Ammissibile
                 Vettore x* che soddisfa tutti i vincoli.
 
 
@@ -107,12 +107,12 @@ Libro di Testo: Fischetti.
                 Queste formano una sottomatrice quadrata B non singolare.
 
 
-        * Soluzione di base
+        * Soluzione di Base
                 Vettore x* che soddisfa tutti i vincoli di uguaglianza (i vincoli sono attivi).
                 Fra tutti i vincoli attivi in x* ce ne sono n linearmente indipendenti.
 
 
-        * Soluzione di base ammissibile
+        * Soluzione di Base Ammissibile
                 É una soluzione di base che soddisfa tutti i vincoli.
 
 
@@ -121,7 +121,7 @@ Libro di Testo: Fischetti.
                 Più genericamente, due soluzioni di base si dicono adiacenti se esistono n - 1 vincoli linearmente indipendenti che sono attivi in entrambe.
 
 
-        * Soluzione di base associata alla base
+        * Soluzione di Base Associata alla Base
                 Ponendo x_f = 0, x_b = B^{-1}b è una soluzione di base associata alla base B.
                 Se x_b è ≥ 0, x_b è una soluzione di base ammissibile e B è una base ammissibile.
 
